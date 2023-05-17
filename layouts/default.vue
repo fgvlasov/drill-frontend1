@@ -38,6 +38,15 @@
         </div>
       </div>
     </div>
+    <div>
+      <nav class="">
+        <NuxtLink to="drill">АЛМАЗНОЕ СВЕРЛЕНИЕ</NuxtLink>
+        <NuxtLink to="cut">АЛМАЗНАЯ РЕЗКА</NuxtLink>
+        <NuxtLink to="dismantling">ДЕМОНТАЖ</NuxtLink>
+        <NuxtLink to="groove">ШТРОБЛЕНИЕ</NuxtLink>
+        <NuxtLink to="grind">ШЛИФОВКА</NuxtLink>
+      </nav>
+    </div>
     <!--    Заменяется содержимое на страницы-->
     <slot></slot>
   </div>
