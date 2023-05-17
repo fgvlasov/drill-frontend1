@@ -26,7 +26,7 @@
       </div>
       <div>
         <div>
-          <NuxtLink to="{{activeIdx.phone}}">{{activeIdx.extended_phone}}</NuxtLink>
+          <NuxtLink :to="'tel: ' + activeIdx.phone">{{ activeIdx.extended_phone }}</NuxtLink>
           <NuxtLink to="contacts">Как нас найти</NuxtLink>
         </div>
         <div>
