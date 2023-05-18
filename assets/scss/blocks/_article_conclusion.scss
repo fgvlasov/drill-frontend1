@@ -1,0 +1,148 @@
+@import "../config";
+@import "../sprites/sprites-svg";
+
+.articleConclusion {
+  background: $color-light-gray url('../images/bg-light-gray.jpg') center;
+  border-top: 1px solid #c9cace;
+  font-size: 14px;
+  line-height: 1.2em;
+  margin: 76px 0 78px;
+  padding: 20px;
+
+  h3 {
+    color: #000!important;
+    font-size: 16px!important;
+    font-weight: bold!important;
+    letter-spacing: -.15px!important;
+    text-align: left;
+    margin: 33px 0 21px!important;
+  }
+
+  a {
+    color: #000;
+  }
+
+  li {
+    margin-bottom: 17px;
+  }
+
+  .blackButton {
+    margin: 20px 0;
+  }
+
+  .materials {
+    ul {
+      margin-top: 8px;
+    }
+  }
+
+  .feedback {
+    li {
+      margin-bottom: 20px;
+    }
+
+    a {
+      position: relative;
+
+      &:before {
+        background: #ebebeb;
+        border-radius: 50%;
+        content: '';
+        display: inline-block;
+        height: 27px;
+        margin: 0 14px -10px 0;
+        width: 27px;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: 7px;
+        top: 6px;
+      }
+    }
+
+    .shareTwitter {
+      &:before {
+        background: #30a5dd;
+      }
+
+      &:after {
+        @include sprite-svg($sprite-main-twitter);
+      }
+    }
+
+    .shareFb {
+      &:before {
+        background: #3a5a99;
+      }
+
+      &:after {
+        left: 10px;
+        top: 5px;
+
+        @include sprite-svg($sprite-main-facebook);
+      }
+    }
+
+    .shareVk {
+      &:before {
+        background: #5a7da4;
+      }
+
+      &:after {
+        left: 10px;
+        top: 7px;
+        transform: scale(1.25);
+
+        @include sprite-svg($sprite-main-vk);
+      }
+    }
+
+    .shareGplus {
+      &:before {
+        background: #d14334;
+      }
+
+      &:after {
+        left: 8px;
+
+        @include sprite-svg($sprite-main-gplus);
+      }
+    }
+
+    .shareOk {
+      &:before {
+        background: #f3822e;
+      }
+
+      &:after {
+        left: 9px;
+        top: 4px;
+
+        @include sprite-svg($sprite-main-ok);
+      }
+    }
+  }
+
+  @media (min-width: $media-tablet) {
+    background: url('../images/contacts/logo.png') right bottom no-repeat, $color-light-gray url('../images/bg-light-gray.jpg') center;
+    overflow: hidden;
+
+    .materials {
+      float: left;
+      width: 500px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    background:
+      url('../images/contacts/logo.png') right bottom no-repeat,
+      url('../images/contacts/form-bg.png') 0 26px no-repeat,
+      $color-light-gray url('../images/bg-light-gray.jpg') center;
+
+    .materials {
+      margin-left: 235px;
+    }
+  }
+}

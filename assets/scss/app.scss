@@ -1,0 +1,41 @@
+@import "./config";
+
+@import "./reset";
+@import "./fonts";
+@import "./typografy";
+@import "./grid";
+
+// Import blocks
+@import "./blocks/article_conclusion";
+@import "./blocks/carousel";
+@import "./blocks/carousel_reviews";
+@import "./blocks/back_call";
+@import "./blocks/bottom_contacts";
+@import "./blocks/buttons";
+@import "./blocks/definition";
+@import "./blocks/footer";
+@import "./blocks/header";
+@import "./blocks/image_popup";
+@import "./blocks/latest_works";
+@import "./blocks/object_info";
+@import "./blocks/objects_list";
+@import "./blocks/pager";
+@import "./blocks/price_short";
+@import "./blocks/prices_list";
+@import "./blocks/prices_table";
+@import "./blocks/reviews_list";
+@import "./blocks/service_header";
+@import "./blocks/share_block";
+@import "./blocks/sidebar";
+@import "./blocks/social_icons";
+@import "./blocks/stages_list";
+@import "./blocks/tabs";
+@import "./blocks/text_with_image";
+
+// Pages
+@import "./pages/about";
+@import "./pages/contacts";
+@import "./pages/gallery";
+@import "./pages/home";
+@import "./pages/service_page";
+@import "./pages/uslovia";

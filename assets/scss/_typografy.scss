@@ -1,0 +1,142 @@
+@import "config";
+
+body, html {
+  background: #fff;
+  color: #000;
+  font-family: 'OpenSans', sans-serif;
+  font-size: 13px;
+}
+
+h2, h3 {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 20px 0 32px;
+
+  @media (min-width: $media-tablet) {
+    margin: 50px 0 32px;
+  }
+}
+
+h3 {
+  @media (min-width: $media-tablet) {
+    margin: 37px 0;
+  }
+}
+
+h2.stroked {
+  position: relative;
+  
+  &:before {
+    background: #e5e5e5;
+    content: '';
+    height: 3px;
+    left: 0;
+    margin-top: -1px;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    z-index: 1;
+  }
+  
+  span {
+    background: #fff;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+
+    @media (min-width: $media-tablet) {
+      padding: 0 50px;
+    }
+  }
+}
+
+a {
+  color: #ff6c00;
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+input, textarea {
+  &:focus {
+    outline: 2px solid #ff6c00;
+  }
+}
+
+label {
+  cursor: pointer;
+}
+
+article {
+  font-size: 14px;
+  letter-spacing: -.3px;
+  line-height: 1.25em;
+
+  p {
+    margin: 16px 0;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  ol {
+    counter-reset: olCounter;
+    padding-left: 18px;
+
+    li:before {
+      background: transparent!important;
+      counter-increment: olCounter;
+      content: counter(olCounter) '.' !important;
+      display: inline-block;
+      font-weight: bold;
+      height: auto!important;
+      margin: 0 0 0 -18px!important;
+      width: 18px!important;
+    }
+  }
+
+  @media (max-width: $media-tablet - 1px) {
+    > h3, > h4, > ul, > ol, > p, > .definition {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+  }
+}
+
+.breadCrumbs {
+  display: block;
+  font-size: 13px;
+  margin: 0 20px 20px;
+
+  li {
+    display: inline-block;
+
+    &:first-child:before {
+      display: none;
+    }
+
+    &:before {
+      background: url('../images/crumb.png');
+      content: '';
+      display: inline-block;
+      height: 5px;
+      margin: 0 8px 1px 6px;
+      width: 3px;
+    }
+  }
+
+  a {
+    color: #000;
+    opacity: .5;
+    text-decoration: underline;
+  }
+
+  @media (min-width: $media-tablet) {
+    margin: 0 0 52px;
+  }
+}

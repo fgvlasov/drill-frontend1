@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <div>
-      <nav class="">
+  <header>
+
+      <div class="submenu">
         <NuxtLink to="/">Компания</NuxtLink>
         <NuxtLink to="completedobjects">Выполненные объекты</NuxtLink>
         <NuxtLink to="fotoandvideo">Фото и видео</NuxtLink>
@@ -9,16 +9,15 @@
         <NuxtLink to="articles">Статьи</NuxtLink>
         <NuxtLink to="reviews">Отзывы</NuxtLink>
         <NuxtLink to="contacts">Контакты</NuxtLink>
-      </nav>
-    </div>
-    <div>
-      <nav>
+	  </div>
+
+      <div class="social-icons">
         <NuxtLink to="https://www.instagram.com/concut_ru/">Instagram</NuxtLink>
         <NuxtLink to="http://www.youtube.com/channel/UCftRGdsIOSOzVS-5LsuMy9A/feed?activity_view=3">Youtube</NuxtLink>
         <NuxtLink to="http://vk.com/concut">Vk</NuxtLink>
-      </nav>
-    </div>
-    <div>
+	  </div>
+
+	  <div>
       <div>
         <NuxtLink to="https://concut.ru">
           <img src="~assets/images/logo.png" alt="Concut" />
@@ -47,9 +46,11 @@
         <NuxtLink to="grind">ШЛИФОВКА</NuxtLink>
       </nav>
     </div>
+  </header>
     <!--    Заменяется содержимое на страницы-->
     <slot></slot>
-  </div>
+	<footer></footer>
+
 </template>
 
 <script>

@@ -1,0 +1,282 @@
+@import "../config";
+@import "../sprites/sprites-svg";
+
+#contactsPage {
+  .contactsList {
+    font-size: 16px;
+    line-height: 1.2em;
+    text-align: center;
+
+    a {
+      color: black;
+    }
+
+    li {
+      margin-bottom: 40px;
+      padding-top: 143px;
+      position: relative;
+
+      &:before {
+        background: $color-accent;
+        border-radius: 59px;
+        content: '';
+        height: 118px;
+        left: 50%;
+        margin-left: -59px;
+        position: absolute;
+        top: 0;
+        width: 118px;
+      }
+
+      &:nth-child(1):before {
+        background-image: url('../images/contacts/r1.jpg');
+      }
+
+      &:nth-child(2):before {
+        background-image: url('../images/contacts/r2.jpg');
+      }
+
+      &:nth-child(3):before {
+        background-image: url('../images/contacts/r3.jpg');
+      }
+
+      &:nth-child(4):before {
+        background-image: url('../images/contacts/r4.jpg');
+      }
+
+      &:after {
+        content: '';
+        left: 50%;
+        position: absolute;
+        top: 34px;
+        transform: translateX(-50%);
+      }
+
+      &.address:after{
+        @include sprite-svg($sprite-contacts-map);
+      }
+
+      &.email:after{
+        top: 43px;
+
+        @include sprite-svg($sprite-contacts-email);
+      }
+
+      &.phone:after{
+        margin-left: 5px;
+        top: 38px;
+
+        @include sprite-svg($sprite-contacts-phone);
+      }
+
+      &.phone {
+        div {
+          display: inline-block;
+          margin: 0 auto;
+          text-align: left;
+        }
+
+        a {
+          display: block;
+          font-size: 30px;
+          margin: 9px 0 13px -16px;
+          text-decoration: none;
+        }
+
+        small {
+          color: rgba(0, 0, 0, .5);
+          display: block;
+          font-size: 16px;
+        }
+      }
+    }
+
+    @media (min-width: $media-tablet) {
+      overflow: hidden;
+
+      li {
+        display: block;
+        float: left;
+        width: 50%;
+      }
+    }
+
+    @media (min-width: $media-desktop) {
+      li {
+        width: 25%;
+      }
+    }
+  }
+
+  .feedback {
+    background: $color-light-gray url('../images/bg-light-gray.jpg') center;
+    padding: 20px;
+
+    h3 {
+      color: #000;
+      font-size: 16px;
+      font-weight: bold;
+      letter-spacing: -.3px;
+      margin: 33px 0 30px;
+    }
+
+    .form {
+      margin-bottom: 50px;
+      max-width: 438px;
+
+      p {
+        display: block;
+        position: relative;
+        width: auto;
+        padding-right: 17px;
+
+        &.code {
+          display: inline-block;
+          line-height: 40px;
+          font-size: 16px;
+          margin-top: -2px;
+          padding-left: 14px;
+
+          input {
+            margin-left: 21px;
+            width: 120px;
+          }
+        }
+      }
+
+      input, textarea {
+        border: 1px solid #abb1c8;
+        height: 40px;
+        font-size: 16px;
+        margin-bottom: 10px;
+        text-indent: 12px;
+        width: 100%;
+      }
+
+      textarea {
+        height: 187px;
+        padding-top: 6px;
+      }
+
+      .required {
+        font-size: 16px;
+        position: absolute;
+        right: 0;
+        top: 2px;
+      }
+
+      button {
+        margin-top: 24px;
+      }
+    }
+
+    .social {
+      a {
+        color: #000;
+        display: block;
+        font-size: 16px;
+        height: 72px;
+        line-height: 70px;
+        margin-bottom: 44px;
+        position: relative;
+
+        &:before {
+          background: $color-dark-gray;
+          border-radius: 50%;
+          content: '';
+          display: inline-block;
+          float: left;
+          height: 72px;
+          margin-right: 21px;
+          width: 72px;
+        }
+      }
+
+      .instagram a {
+        &:before{
+          background: #bb8c4a;
+        }
+
+        &:after {
+          content: '';
+          position: absolute;
+          left: 30px;
+          top: 30px;
+          transform: scale(3.2);
+
+          @include sprite-svg($sprite-main-instagram);
+        }
+      }
+
+      .youtube a {
+        &:before{
+          background: #cf0000;
+        }
+
+        &:after {
+          content: '';
+          position: absolute;
+          left: 30px;
+          top: 27px;
+          transform: scale(3.2);
+
+          @include sprite-svg($sprite-main-youtube);
+        }
+      }
+
+      .vk a {
+        &:before{
+          background: #688fb9;
+        }
+
+        &:after {
+          content: '';
+          position: absolute;
+          left: 33px;
+          top: 31px;
+          transform: scale(3.2);
+
+
+          @include sprite-svg($sprite-main-vk);
+        }
+      }
+    }
+
+    @media (min-width: $media-tablet) {
+      background: url('../images/contacts/logo.png') right bottom no-repeat, $color-light-gray url('../images/bg-light-gray.jpg') center;
+      overflow: hidden;
+
+      .form, .social {
+        float: left;
+        margin-bottom: 35px;
+      }
+
+      .form {
+        width: 438px;
+      }
+
+      .social {
+        margin-left: 68px;
+      }
+    }
+
+    @media (min-width: 1280px) {
+      background:
+        url('../images/contacts/logo.png') right bottom no-repeat,
+        url('../images/contacts/form-bg.png') 0 26px no-repeat,
+        $color-light-gray url('../images/bg-light-gray.jpg') center;
+
+      .form {
+        margin-left: 235px;
+      }
+    }
+  }
+
+  @media (min-width: $media-tablet) {
+    #map {
+      iframe {
+        height: 700px;
+      }
+    }
+  }
+}

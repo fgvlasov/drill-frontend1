@@ -1,0 +1,54 @@
+@import "../config";
+@import "../sprites/sprites-svg";
+
+article {
+  .definition {
+    font-size: 13px;
+    margin-top: 40px;
+  }
+}
+
+.definition {
+  li {
+    display: inline-block;
+    margin: 0 23px 0 0;
+
+    &.date {
+      color: #afafaf;
+
+      &:before {
+        content: '';
+        display: inline-block;
+        margin-bottom: -1px;
+        margin-right: 7px;
+        opacity: .3;
+
+        @include sprite-svg($sprite-main-calendar);
+      }
+    }
+
+    &.address {
+      &:before {
+        content: '';
+        display: inline-block;
+        margin-bottom: -3px;
+        margin-right: 8px;
+
+        @include sprite-svg($sprite-main-marker);
+      }
+    }
+
+    &.views {
+      color: #afafaf;
+
+      &:before {
+        content: '';
+        display: inline-block;
+        margin-right: 6px;
+        opacity: .3;
+
+        @include sprite-svg($sprite-main-watch-black);
+      }
+    }
+  }
+}
