@@ -1,0 +1,77 @@
+@import "config";
+
+.container {
+  margin: 0 20px;
+
+  @media (min-width: $media-tablet) {
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  @media (min-width: $media-desktop) {
+    $desktop-offset: 26px;
+
+    max-width: 1476 + ($desktop-offset * 2);
+    padding-left: $desktop-offset;
+    padding-right: $desktop-offset;
+  }
+
+  &.mobileWide {
+    @media (max-width: $media-tablet) {
+      margin: 0;
+    }
+  }
+
+  &.wide {
+    margin: 0 auto;
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 100%;
+
+    @media (min-width: $media-desktop) {
+      max-width: 1476px;
+    }
+  }
+
+  &.withSidebar {
+    margin-top: 53px;
+
+    .sidebar {
+      display: none;
+    }
+
+    h3 {
+      color: #ff7e00;
+    }
+
+    @media (min-width: $media-tablet) {
+      h2, h3 {
+        text-align: left;
+      }
+
+      h2 {
+        margin: 0 0 8px;
+      }
+
+      h3 {
+        font-size: 19px;
+        letter-spacing: .8px;
+        margin: 61px 0 29px;
+      }
+    }
+
+    @media (min-width: $media-desktop) {
+      overflow: hidden;
+
+      > .main {
+        padding-left: 255px;
+      }
+
+      .sidebar {
+        display: block;
+        float: left;
+        width: 220px;
+      }
+    }
+  }
+}

@@ -1,0 +1,345 @@
+@import "../config";
+@import "../sprites/sprites-svg";
+
+.pricesTable {
+  border: 3px solid #36373c;
+  margin-top: 30px!important;
+
+  .pricesListSidebar {
+    background: #36373c;
+    text-align: center;
+    padding-bottom: 25px;
+
+    h4 {
+      color: #fa922a;
+      font-size: 20px;
+      padding: 29px 0 5px;
+      //padding: 49px 0 45px; // для больших разрешений
+    }
+
+    .sales {
+      border: 3px solid white;
+      color: #fff;
+      font-size: 20px;
+      margin: 25px 25px 0;
+      padding: 26px 100px 43px 28px;
+      text-align: left;
+
+      ul {
+        margin-top: 16px;
+      }
+
+      li {
+        font-size: 16px;
+        color: #fa922a;
+        margin-top: 9px;
+        position: relative;
+
+        span {
+          bottom: 0;
+          color: #fff;
+          position: absolute;
+          right: -100px;
+          width: 60px;
+        }
+      }
+    }
+  }
+
+  .table {
+    padding-bottom: 30px;
+
+    ul {
+      list-style: disc;
+      margin-left: 19px;
+
+      &.important {
+        border-left: 5px solid #fa922a;
+        list-style: none;
+        margin-left: 0;
+        margin-bottom: 45px;
+        padding: 5px 0 0;
+
+        li {
+          margin-left: 32px;
+        }
+      }
+
+      &.additional {
+        color: #424348;
+        font-size: 14px;
+        opacity: .8;
+      }
+    }
+
+    li {
+      margin-bottom: 17px;
+    }
+  }
+
+  .tableWrapper {
+    position: relative;
+    padding: 51px 10px 0;
+  }
+
+  .legend {
+    height: 100%;
+    font-size: 18px;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    list-style: none!important;
+    margin: 0!important;
+    top: 0;
+    z-index: 1;
+
+    .horizontal {
+      position: absolute;
+      width: 100%;
+      top: 51px;
+      left: 0;
+    }
+
+    .vertical {
+      position: absolute;
+      transform: rotate(-90deg);
+      left: -35px;
+      top: 50%;
+    }
+  }
+
+  .dotsDecoratorLeft, .dotsDecoratorRight {
+    position: absolute;
+    top: 0;
+    height: 100%;
+
+    // Точечки слева (верх + низ)
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      left: 10px;
+      top: 56px;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #fa922a;
+    }
+
+    &:after {
+      bottom: 32px;
+      top: auto;
+    }
+  }
+
+  .dotsDecoratorRight {
+    position: absolute;
+    right: 24px;
+
+    // Точечки справа (верх + низ)
+    &:before, &:after {
+      left: auto;
+      top: 51px;
+    }
+    &:after {
+      bottom: 32px;
+      top: auto;
+    }
+  }
+
+  .tableScroller {
+    display: flex;
+    overflow: auto;
+    padding-top: 38px;
+    position: relative;
+    margin: 0 25px;
+    padding-bottom: 20px;
+    width: calc(100% - 50px);
+    z-index: 2;
+
+    .spaceAdder {
+      flex-grow: 1;
+      flex-shrink: 0;
+      width: 13px;
+    }
+  }
+
+  table {
+    font-size: 14px;
+    overflow: auto;
+    width: 100%;
+
+    th {
+      font-weight: bold;
+    }
+
+    td, th {
+      text-align: center;
+      padding: 9px 4px;
+
+      &.active {
+        background: #feebd9;
+      }
+    }
+
+    tbody th {
+      padding-left: 15px;
+    }
+
+    // Выделенный стобец с глубиной
+    th.active {
+      border-radius: 18px 18px 0 0;
+      color: #ff6600;
+    }
+
+    // Строка, на которую навели указатель
+    tbody tr:hover {
+      background: #feebd9;
+
+      // Левый столбец с указанием ширины
+      th {
+        border-radius: 50px 0 0 50px;
+        color: #ff6600;
+      }
+
+      // Последний столбец, после него добавляем закругление
+      td:last-of-type {
+        position: relative;
+
+        &:after {
+          border-radius: 0 50px 50px 0;
+          content: '';
+          position: absolute;
+          background: #feebd9;
+          right: -13px;
+          top: 0;
+
+          width: 13px;
+          height: 100%;
+        }
+      }
+    }
+
+    thead {
+      th {
+        padding-top: 17px;
+      }
+    }
+
+    // Последняя строка
+    tbody tr:last-of-type {
+      // У выделенного столбца добавляем закругление снизу
+      td.active {
+        position: relative;
+
+        &:before {
+          bottom: -18px;
+          content: '';
+          position: absolute;
+          left: 0;
+          background: #feebd9;
+          border-radius: 0 0 18px 18px;
+          width: 100%;
+          height: 18px;
+        }
+      }
+    }
+
+    tbody td:hover {
+      background: #fa922a;
+      cursor: pointer;
+
+      // Меняет цвет закругления после ячейки последнего стобца при наведении на неё курсора
+      &:after {
+        //background: #fa922a!important;
+      }
+    }
+  }
+
+  hr {
+    background: #d9d9da;
+    border: none;
+    height: 1px;
+    margin: 50px 20px;
+  }
+
+  .pricesAdjustment, .additional {
+    font-size: 14px;
+    line-height: 1.25em;
+    padding: 0 20px;
+  }
+
+  .pricesAdjustment {
+    .coefficients {
+      p {
+        font-size: 16px;
+        letter-spacing: -.3px;
+        margin-bottom: 19px;
+      }
+
+      li {
+        margin-bottom: 2px;
+      }
+    }
+  }
+
+  @media (min-width: $media-tablet) {
+    .pricesAdjustment {
+      display: flex;
+      justify-content: space-between;
+
+      > * {
+        width: 45%;
+      }
+
+      .important {
+        margin-bottom: 0!important;
+      }
+
+      .coefficients {
+        margin-top: 6px;
+      }
+    }
+  }
+
+  @media (min-width: $media-desktop) {
+    display: flex;
+
+    .pricesListSidebar {
+      width: 328px;
+      margin-right: 41px;
+    }
+
+    .table {
+      flex-grow: 1;
+      padding-bottom: 80px;
+    }
+
+    .legend {
+      .vertical {
+        left: -26px;
+      }
+    }
+
+    .tableWrapper {
+      padding: 57px 10px 0;
+    }
+
+    .tableScroller {
+      margin: 0 109px 0 54px;
+      width: calc(100% - 153px);
+    }
+
+    .dotsDecoratorRight {
+      right: 78px;
+    }
+
+    .pricesAdjustment, .additional {
+      padding-right: 52px;
+    }
+
+    hr {
+      margin-right: 52px;
+    }
+  }
+}

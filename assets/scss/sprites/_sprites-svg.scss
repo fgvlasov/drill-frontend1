@@ -1,0 +1,67 @@
+
+$sprite-contacts-email: 0px -53.28px 118px 94px 45.75px 32.38px 'contacts.svg' 'false';
+$sprite-contacts-map: -60.24px 0px 118px 94px 49.59px 42.31px 'contacts.svg' 'false';
+$sprite-contacts-phone: 0px 0px 118px 94px 52.24px 45.28px 'contacts.svg' 'false';
+
+
+$sprite-alm-swerl-service1: 0px 0px 394px 394px 189px 189px 'alm-swerl.svg' 'false';
+$sprite-alm-swerl-service2: -197px 0px 394px 394px 189px 189px 'alm-swerl.svg' 'false';
+$sprite-alm-swerl-service3: 0px -197px 394px 394px 189px 189px 'alm-swerl.svg' 'false';
+
+
+$sprite-demontazh-additional: -57px -198px 302px 270px 59px 58px 'demontazh.svg' 'false';
+$sprite-demontazh-deed: -198px -96.79px 302px 270px 53px 80px 'demontazh.svg' 'false';
+$sprite-demontazh-evolution: -124px -198px 302px 270px 59px 52px 'demontazh.svg' 'false';
+$sprite-demontazh-no-heavy-machinery: 0px 0px 302px 270px 190px 190px 'demontazh.svg' 'false';
+$sprite-demontazh-outside: -198px 0px 302px 270px 95.16px 88.79px 'demontazh.svg' 'false';
+$sprite-demontazh-price: 0px -198px 302px 270px 49px 64px 'demontazh.svg' 'false';
+
+// Generate by Protoss
+@mixin sprite-svg($filename) {
+  width: nth($filename, 5);
+  height: nth($filename, 6);
+  background-image: url('../images/sprites-svg/' +  nth($filename, 7));
+  background-size: nth($filename, 3) nth($filename, 4);
+  background-position: (nth($filename, 1) - 4) (nth($filename, 2) - 4) ; // sprite padding include
+  background-repeat: no-repeat;
+}
+
+$sprite-uslovia-business-trip-price: 0px 0px 313px 177px 64px 64px 'uslovia.svg' 'false';
+$sprite-uslovia-contract: -72px 0px 313px 177px 49px 63px 'uslovia.svg' 'false';
+$sprite-uslovia-free-consult: 0px -72px 313px 177px 61px 46px 'uslovia.svg' 'false';
+$sprite-uslovia-min-price: -129px 0px 313px 177px 53px 61px 'uslovia.svg' 'false';
+$sprite-uslovia-no-prepayment: -190px 0px 313px 177px 46px 61px 'uslovia.svg' 'false';
+$sprite-uslovia-payment-types: 0px -126px 313px 177px 61px 43px 'uslovia.svg' 'false';
+$sprite-uslovia-sales: -244px 0px 313px 177px 61px 61px 'uslovia.svg' 'false';
+$sprite-uslovia-warranty: -244px -69px 313px 177px 46px 53px 'uslovia.svg' 'false';
+
+
+$sprite-main-back-call: -139px 0px 278px 238px 110px 43px 'main.svg' 'false';
+$sprite-main-calc: -35.01px -158px 278px 238px 27px 27px 'main.svg' 'false';
+$sprite-main-calendar: -14.81px -215.98px 278px 238px 13px 12.969999999999999px 'main.svg' 'false';
+$sprite-main-envelope: -70.00999999999999px -158px 278px 238px 18px 13px 'main.svg' 'false';
+$sprite-main-facebook: 0px -215.98px 278px 238px 6.8100000000000005px 13.32px 'main.svg' 'false';
+$sprite-main-goto-arrow: -107px -94px 278px 238px 10px 21px 'main.svg' 'false';
+$sprite-main-goto-arrows: -107px -36px 278px 238px 17px 21px 'main.svg' 'false';
+$sprite-main-goto-arrows-black: -107px -65px 278px 238px 17px 21px 'main.svg' 'false';
+$sprite-main-gplus: -19px -193.01px 278px 238px 14.25px 11.879999999999999px 'main.svg' 'false';
+$sprite-main-instagram: -257px -21px 278px 238px 12px 12px 'main.svg' 'false';
+$sprite-main-logo-symbol: -139px -51px 278px 238px 45px 48px 'main.svg' 'false';
+$sprite-main-logo-symbol-small: -139px -107px 278px 238px 36px 38px 'main.svg' 'false';
+$sprite-main-logo-text: 0px 0px 278px 238px 131px 28px 'main.svg' 'false';
+$sprite-main-marker: 0px -193.01px 278px 238px 11px 14.969999999999999px 'main.svg' 'false';
+$sprite-main-ok: -240px -107px 278px 238px 8.059999999999999px 14.120000000000001px 'main.svg' 'false';
+$sprite-main-price: -192px -51px 278px 238px 36px 39px 'main.svg' 'false';
+$sprite-main-search: -107px -123px 278px 238px 18px 19px 'main.svg' 'false';
+$sprite-main-slider-arrow: -221px -107px 278px 238px 11px 35px 'main.svg' 'false';
+$sprite-main-slider-arrow-black: -202px -107px 278px 238px 11px 35px 'main.svg' 'false';
+$sprite-main-slider-arrow-gray: -183px -107px 278px 238px 11px 35px 'main.svg' 'false';
+$sprite-main-slider-arrow-hover: -236px -51px 278px 238px 11px 35px 'main.svg' 'false';
+$sprite-main-target: 0px -36px 278px 238px 99px 114px 'main.svg' 'false';
+$sprite-main-twitter: -41.25px -193.01px 278px 238px 13.309999999999999px 10.719999999999999px 'main.svg' 'false';
+$sprite-main-vk: -257px -41px 278px 238px 8px 9px 'main.svg' 'false';
+$sprite-main-watch: -144.01px -158px 278px 238px 16px 10px 'main.svg' 'false';
+$sprite-main-watch-black: -120.00999999999999px -158px 278px 238px 16px 10px 'main.svg' 'false';
+$sprite-main-watch-hover: -96.00999999999999px -158px 278px 238px 16px 10px 'main.svg' 'false';
+$sprite-main-youtube: -257px 0px 278px 238px 13px 13px 'main.svg' 'false';
+$sprite-main-zoom: 0px -158px 278px 238px 27.009999999999998px 27.009999999999998px 'main.svg' 'false';

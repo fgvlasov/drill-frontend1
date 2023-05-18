@@ -1,0 +1,368 @@
+@import "../config";
+@import "../sprites/sprites-svg";
+
+@import "../grid";
+
+$media-tablet:   800px;
+
+header {
+  margin: 10px 0;
+  position: relative;
+
+  h1 {
+    @include sprite-svg($sprite-main-logo-symbol-small);
+    margin-left: 50px;
+    text-indent: -99em;
+    position: relative;
+
+    a {
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+  }
+
+  .general {
+    @media (max-width: $media-tablet) {
+      margin: 0;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  .submenu {
+    background: #5e6067 url(../images/bg-gray.png) top center;
+    color: #ff6c00;
+    display: none;
+    font-size: 13px;
+
+    li.active {
+      a {
+        border-bottom: 3px solid white;
+        color: #b4b7c1;
+        display: inline-block;
+        padding: 0 0 5px;
+      }
+
+    }
+
+    @media (max-width: $media-tablet) {
+      margin-top: -50px;
+
+      &.open {
+        animation: submenu .2s;
+        display: block;
+        position: absolute;
+        padding-bottom: 20px;
+        left: 0;
+        top: -10px;
+        z-index: 10;
+        margin-top: 0;
+        width: 100%;
+      }
+
+      .social-icons {
+        display: block;
+        margin: 20px auto;
+      }
+
+      ul.links {
+        margin: 17px 0 30px 30px;
+
+        li {
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    @media (min-width: $media-tablet) {
+      li {
+        &.active {
+          position: relative;
+
+          &:after {
+            background: #fff;
+            bottom: 6px;
+            content: '';
+            height: 3px;
+            left: -10px;
+            position: absolute;
+            width: calc(100% + 20px);
+          }
+        }
+      }
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+
+      &:hover, &.active {
+        color: #ff6c00;
+      }
+    }
+  }
+
+  nav {
+    font-weight: 700;
+    font-size: 13px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ff6c00;
+    margin: 10px 0;
+    padding: 5px 20px;
+    letter-spacing: -.3px;
+
+    a {
+      color: #000;
+      text-decoration: none;
+
+      &.active, &:hover {
+        color: #ff6c00;
+      }
+    }
+
+    li {
+      display: inline-block;
+      padding: 5px 4px 5px 0;
+
+      &:after {
+        content: '|';
+        padding-left: 8px;
+      }
+
+      &:last-child:after {
+        display: none;
+      }
+    }
+  }
+
+  .contacts {
+    position: absolute;
+    right: 10px;
+    top: 2px;
+
+    a {
+      display: none;
+    }
+
+    .phone {
+      display: inline-block;
+      font-size: 18px;
+      font-weight: bold;
+      text-decoration: none;
+      color: #000;
+    }
+  }
+
+  @media (min-width: 410px) {
+    h1 {
+      &:after {
+        content: '';
+        @include sprite-svg($sprite-main-logo-text);
+        position: absolute;
+        left: nth($sprite-main-logo-symbol-small, 5) + 15;
+        top: 50%;
+        margin-top: -(calc(nth($sprite-main-logo-text, 6) / 2));
+      }
+    }
+  }
+
+  @media (min-width: $media-tablet) {
+    margin: 0;
+
+    h1 {
+      @include sprite-svg($sprite-main-logo-symbol-small);
+      margin: 0;
+      flex-grow: 0;
+      flex-shrink: 0;
+    }
+
+    nav {
+      margin-top: 20px;
+
+      ul {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      li {
+        margin: 0 0 0 15px;
+
+        &:after {
+          display: none;
+        }
+      }
+    }
+
+    .contacts {
+      top: 65px;
+
+      ul {
+        display: flex;
+        justify-content: space-between;
+        text-align: left;
+      }
+
+      li {
+        padding-left: 20px;
+      }
+
+      a {
+        display: block;
+        font-size: 13px;
+      }
+
+      .phone {
+        margin-bottom: 6px;
+      }
+
+      .link {
+        letter-spacing: -.3px;
+        margin-left: 4px;
+      }
+    }
+
+    .submenu {
+      background-image: url(../images/footer.png);
+      display: block;
+      height: 43px;
+      margin-bottom: 25px;
+      overflow: hidden;
+
+      .container {
+        position: relative;
+      }
+
+      ul.links {
+        margin-right: 150px;
+        display: flex;
+        justify-content: space-between;
+        max-width: 1050px;
+
+
+        li {
+          display: inline-block;
+          line-height: 41px;
+        }
+      }
+    }
+
+    .social-icons {
+      position: absolute;
+      right: 20px;
+      top: 9px;
+      margin-right: 0!important;
+    }
+  }
+
+  @media (min-width: $media-desktop) {
+    h1 {
+      $offset-bottom: 6px;
+
+      @include sprite-svg($sprite-main-logo-symbol);
+
+      margin-bottom: $offset-bottom + nth($sprite-main-logo-text, 6);
+      margin-left: (calc(nth($sprite-main-logo-text, 5) / 2)) - (calc(nth($sprite-main-logo-symbol, 5) / 2));
+
+      &:after {
+        content: '';
+        @include sprite-svg($sprite-main-logo-text);
+        position: absolute;
+        left: - (calc((nth($sprite-main-logo-text, 5) /2)) - (calc(nth($sprite-main-logo-symbol, 5) /2)));
+        bottom: - (nth($sprite-main-logo-text, 6) + $offset-bottom) + 2;
+        margin-top: 0;
+        top: auto;
+      }
+    }
+
+    .submenu {
+      margin-bottom: 34px;
+    }
+
+    .social-icons {
+      right: 26px
+    }
+
+    .general {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .contacts {
+      position: relative;
+      left: auto;
+      top: auto;
+      margin-left: 20px;
+      width: 362px;
+    }
+  }
+}
+
+#headerMenu {
+  cursor: pointer;
+  display: block;
+  height: 22px;
+  left: 10px;
+  position: absolute;
+  top: 8px;
+  width: 26px;
+  z-index: 11;
+
+  span, &:after, &:before {
+    border-top: 2px solid black;
+    left: 0;
+    position: absolute;
+    top: 10px;
+    transition: transform .2s, top .2s;
+    width: 26px;
+  }
+
+  &:before {
+    content: '';
+    top: 0;
+  }
+
+  &:after {
+    content: '';
+    top: 20px;
+  }
+
+  &.open {
+    span {
+      opacity: 0;
+    }
+
+    span, &:after, &:before {
+      border-top-color: #fff;
+    }
+
+    &:before {
+      top: 10px;
+      transform: rotate(-45deg);
+    }
+
+    &:after {
+      top: 10px;
+      transform: rotate(45deg);
+    }
+  }
+
+  @media (min-width: $media-tablet) {
+    display: none;
+  }
+}
+
+@keyframes submenu {
+  from {
+    margin-top: -50px;
+    opacity: 0;
+  }
+  to {
+    margin-top: 0;
+    opacity: 1;
+  }
+}

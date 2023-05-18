@@ -1,0 +1,56 @@
+@import "../sprites/sprites-svg";
+
+.social-icons {
+  li {
+    display: block;
+    float: left;
+    margin: 0!important;
+  }
+  a {
+    display: block;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    margin-left: 29px;
+    position: relative;
+    transition: transform .2s, box-shadow .2s;
+
+    &:hover {
+      //transform: translateY(-2px);
+      transform: scale(1.5);
+      box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+    }
+
+    &:after {
+      content: '';
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+
+    &.instagram {
+      background: #bb8c4a;
+
+      &:after {
+        @include sprite-svg($sprite-main-instagram);
+      }
+    }
+
+    &.youtube {
+      background: #cf0000;
+
+      &:after {
+        @include sprite-svg($sprite-main-youtube);
+      }
+    }
+
+    &.vk {
+      background: #688fb9;
+
+      &:after {
+        @include sprite-svg($sprite-main-vk);
+      }
+    }
+  }
+}

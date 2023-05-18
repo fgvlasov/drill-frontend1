@@ -1,0 +1,448 @@
+@import "../config";
+@import "../sprites/sprites-svg";
+
+#servicePage {
+  .short {
+    background: $color-accent url('../images/bg-orange.jpg') top center no-repeat;
+    background-size: cover;
+    font-size: 16px;
+    padding: 60px 0 20px;
+
+    h5 {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+    
+    div {
+      margin: 0 50px 50px;
+      text-align: center;
+
+      @media (min-width: $media-desktop) {
+        margin: 0 auto 68px;
+        width: 680px;
+      }
+    }
+
+    ul {
+      overflow: hidden;
+    }
+
+    li {
+      display: block;
+      text-align: center;
+      padding: 220px 40px 40px;
+      position: relative;
+
+      @media (min-width: $media-tablet) {
+        float: left;
+        width: 33%;
+      }
+
+      &:before {
+        position: absolute;
+        top: 100px;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        content: '';
+      }
+
+      // Иконки с растровыми изображениями
+      &.quality-workers, &.modern-stuff, &.tidy-result,
+      &.estetic, &.economic, &.safety{
+        &:before {
+          background: #fff center no-repeat;
+          border-radius: 84px;
+          height: 168px;
+          box-shadow: 0 0 0 9px rgba(255, 255, 255, .3);
+          width: 168px;
+        }
+      }
+
+      // Иконки страницы "Алмазная резка"
+      &.quality-workers:before {
+        background-image: url('../images/alm-rezka/quality-workers.jpg');
+      }
+      &.modern-stuff:before {
+        background-image: url('../images/alm-rezka/modern-stuff.jpg');
+      }
+      &.tidy-result:before {
+        background-image: url('../images/alm-rezka/tidy-result.jpg');
+      }
+
+      // Иконки страницы "Алмазное сверление"
+      &.swerl1 {
+        &:before {
+          @include sprite-svg($sprite-alm-swerl-service1);
+        }
+      }
+      &.swerl2 {
+        &:before {
+          @include sprite-svg($sprite-alm-swerl-service2);
+        }
+      }
+      &.swerl3 {
+        &:before {
+          @include sprite-svg($sprite-alm-swerl-service3);
+        }
+      }
+
+      // Иконки страницы "Демонтаж"
+      &.instrument {
+        &:before {
+          width: 183px;
+          height: 145px;
+          background: url('../images/_tmp/demontazh-instrument-ico.png');
+        }
+      }
+
+      &.no-heavy-machinery {
+        &:before {
+          @include sprite-svg($sprite-demontazh-no-heavy-machinery)
+        }
+      }
+
+      &.outside {
+        &:before {
+          @include sprite-svg($sprite-demontazh-outside)
+        }
+      }
+
+      // Иконки страницы "Штробление"
+      &.estetic:before {
+        background-image: url('../images/shtroblenie/estetic.jpg');
+      }
+
+      &.economic:before {
+        background-image: url('../images/shtroblenie/economic.jpg');
+      }
+
+      &.safety:before {
+        background-image: url('../images/shtroblenie/safety.jpg');
+      }
+    }
+
+    @media (min-width: $media-desktop) {
+      padding-left: 60px;
+      padding-right: 60px;
+    }
+  }
+
+  p {
+    line-height: 1.2em;
+    letter-spacing: -.3px;
+  }
+
+  .about {
+    background: #e8e9ed url('../images/bg-light-gray.jpg') top center no-repeat;
+    background-size: cover;
+    font-size: 16px;
+    text-align: center;
+
+    > div {
+      div {
+        padding: 40px 25px;
+      }
+    }
+
+    img {
+      width: 100%;
+    }
+
+    h4 {
+      color: #ff750f;
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 28px;
+      margin-top: -4px;
+      text-transform: uppercase;
+    }
+
+    p {
+      margin-bottom: 20px;
+    }
+
+    strong {
+      font-weight: bold;
+    }
+
+    @media (min-width: $media-tablet) {
+      font-size: 18px;
+      overflow: hidden;
+
+      > div {
+        width: 50%;
+        float: left;
+
+        div {
+          padding: 60px 40px;
+        }
+
+        &:first-child {
+          img {
+            border-right: 1px solid white;
+          }
+        }
+      }
+
+      > div:first-child {
+        position: relative;
+
+        div {
+          position: relative;
+        }
+
+        div:after {
+          background: #fff;
+          content: '';
+          display: block;
+          height: calc(100% - 94px);
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 1px;
+        }
+      }
+    }
+
+    @media (min-width: $media-desktop) {
+      > div {
+        div {
+          padding: 57px 145px;
+        }
+      }
+    }
+  }
+
+  .benefits {
+    background: $color-dark-gray url('../images/bg-gray.png') top center no-repeat;
+    background-size: cover;
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.25em;
+    letter-spacing: -.15px;
+    text-align: center;
+    padding: 70px 0;
+
+    a {
+      color: #fff;
+    }
+
+    .video {
+      padding-bottom: 70px;
+
+      img {
+        max-width: 100%;
+      }
+    }
+
+    ul {
+      margin: 0 auto;
+    }
+
+    li {
+      position: relative;
+      padding-top: 85px;
+      width: 200px;
+      margin: 0 auto;
+      display: block;
+
+      &.del {
+        width: 200px;
+
+        &:before {
+          transform: none;
+          width: 7px;
+          height: 7px;
+          background: $color-accent;
+          border-radius: 50%;
+          left: 50%;
+          top: 40px;
+        }
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+      }
+
+      &.price:before {
+        top: 5px;
+        @include sprite-svg($sprite-demontazh-price);
+      }
+
+      &.deed:before {
+        @include sprite-svg($sprite-demontazh-deed);
+      }
+
+      &.evolution:before {
+        top: 14px;
+        @include sprite-svg($sprite-demontazh-evolution);
+      }
+
+      &.additional:before {
+        top: 13px;
+        @include sprite-svg($sprite-demontazh-additional);
+      }
+    }
+
+    @media (min-width: $media-tablet) {
+      padding-top: 32px;
+      padding-bottom: 57px;
+
+      ul {
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      li {
+        padding-top: 92px;
+
+        &.del {
+          width: 8px;
+          flex-shrink: 0;
+
+          &:before {
+            margin-left: -4px;
+            margin-top: -3px;
+          }
+        }
+      }
+    }
+
+    @media (min-width: $media-desktop) {
+      ul {
+        margin: 0 100px;
+      }
+
+      li {
+        width: 200px;
+      }
+    }
+  }
+
+  .serviceList {
+    background: #e5e6ea;
+    padding: 30px;
+    font-size: 16px;
+
+    h4 {
+      font-size: 36px;
+      letter-spacing: -.75px;
+      margin-left: 20px;
+      margin-bottom: 30px;
+    }
+
+    ul {
+      line-height: 1.22em;
+      list-style: disc;
+      margin-left: 20px;
+    }
+
+    li {
+      margin-bottom: 20px;
+    }
+
+    @media (min-width: $media-desktop) {
+      min-height: 450px;
+      background: #e5e6ea left top no-repeat;
+      position: relative;
+      padding-left: 735px;
+      padding-top: 100px;
+
+      h4 {
+        color: #fff;
+        left: 102px;
+        line-height: 1.2em;
+        max-width: 400px;
+        position: absolute;
+        top: 77px;
+      }
+    }
+  }
+
+  .pricesImages {
+    border: 3px solid #36373c;
+    font-size: 20px;
+    margin-top: 44px;
+
+    li {
+      padding: 50px 20px 50px 50px;
+    }
+
+    img {
+      display: none;
+    }
+
+    small {
+      display: block;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+
+    @media (min-width: $media-tablet) {
+      li {
+        overflow: hidden;
+        padding: 0;
+        position: relative;
+
+        div {
+          height: 100%;
+          position: absolute;
+          right: 0;
+          top: 0;
+          width: 50%;
+
+          p {
+            left: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+      }
+
+      img {
+        display: block;
+        float: left;
+        width: 50%;
+      }
+    }
+  }
+
+  @media (min-width: $media-desktop) {
+    &.demontazh {
+      .serviceList {
+        background-image: url('../images/demontazh/services.jpg');
+      }
+    }
+    &.almRezka {
+      .serviceList {
+        background-image: url('../images/alm-rezka/services.jpg');
+      }
+    }
+    &.almSwerl {
+      .serviceList {
+        background-image: url('../images/alm-swerl/services.jpg');
+      }
+    }
+    &.shlifowka {
+      .serviceList {
+        background-image: url('../images/shlifowka/services.jpg');
+        min-height: 360px;
+      }
+    }
+    &.shtroblenie {
+      .serviceList {
+        background-image: url('../images/shtroblenie/services.jpg');
+        min-height: 540px;
+      }
+    }
+  }
+}

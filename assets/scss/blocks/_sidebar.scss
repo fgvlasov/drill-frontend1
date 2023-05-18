@@ -1,0 +1,117 @@
+@import "../config";
+@import "../sprites/sprites-svg";
+
+.sidebar {
+  font-size: 14px;
+
+  h4 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 28px;
+    text-transform: uppercase;
+  }
+
+  hr {
+    background: #e5e5e5;
+    border: none;
+    display: block;
+    height: 3px;
+    margin: 16px 0 34px;
+  }
+
+  .hint {
+    margin: 31px 0 42px;
+
+    h4 {
+      margin-bottom: 17px;
+    }
+
+    p {
+      line-height: 1.25em;
+    }
+  }
+
+  .withCarousel {
+    position: relative;
+  }
+
+  .slideToPrev, .slideToNext {
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    top: -11px;
+    right: 38px;
+    transform: scale(.5);
+
+    @include sprite-svg($sprite-main-slider-arrow-gray);
+
+    &:hover {
+      @include sprite-svg($sprite-main-slider-arrow-hover);
+    }
+  }
+
+  .slideToNext {
+    right: 0;
+    transform: scale(.5) rotate(180deg);
+  }
+
+  .callForm {
+    background: #000 url('../images/sidebar-call-form.jpg') center no-repeat;
+    display: block;
+    height: 328px;
+    position: relative;
+
+    h4 {
+      color: white;
+      display: block;
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 1.2em;
+      padding: 44px 20px 0;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    input, .whiteButton {
+      left: 32px;
+      position: absolute;
+      width: 159px;
+    }
+
+    input {
+      border: none;
+      bottom: 73px;
+      font-size: 12px;
+      height: 32px;
+      text-indent: 10px;
+    }
+
+    .whiteButton {
+      bottom: 27px;
+      letter-spacing: -.5px;
+      padding: 7px 0 8px;
+    }
+  }
+
+  .aboutBenefits {
+    font-size: 14px;
+  }
+}
+
+#sidebarProjects {
+  img {
+    max-width: 100%;
+  }
+
+  a {
+    background: #f5f6f8;
+    height: auto;
+    padding-bottom: 5px;
+    width: auto;
+
+    img {
+      height: auto!important;
+      width: auto!important;
+    }
+  }
+}

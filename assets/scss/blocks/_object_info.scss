@@ -1,0 +1,53 @@
+@import "../config";
+@import "../sprites/sprites-svg";
+
+#objectInfo {
+  font-size: 14px;
+  padding: 0 20px;
+
+  .photo {
+    font-size: 15px;
+    letter-spacing: -.2px;
+    margin-bottom: 30px;
+
+    img {
+      display: block;
+      width: 100%;
+    }
+
+    .definition {
+      border: 1px solid #cacbcf;
+      border-top-width: 0;
+      display: block;
+      padding: 23px 21px 25px;
+    }
+  }
+
+  h4 {
+    font-weight: bold;
+    margin: 35px 0 18px;
+  }
+
+  p {
+    line-height: 1.25em;
+    margin-bottom: 16px;
+  }
+
+  ul {
+    padding-left: 16px;
+    line-height: 1.25em;
+    list-style: disc;
+  }
+
+  @media (min-width: $media-tablet) {
+    padding: 0;
+
+    .photo {
+      margin-bottom: 64px;
+    }
+  }
+}
+
+.latestWorksTitle {
+  padding-bottom: 22px;
+}

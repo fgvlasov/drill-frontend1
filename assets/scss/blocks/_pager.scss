@@ -1,0 +1,88 @@
+.pager {
+  color: #ff6c00;
+  font-size: 16px;
+  margin-top: 70px;
+  text-align: center;
+
+  li {
+    display: inline-block;
+    height: 39px;
+    line-height: 39px;
+    margin: 0 5px 10px;
+    width: 40px;
+
+    &.active {
+      color: #000;
+      outline: 1px solid #999999;
+    }
+  }
+
+  a {
+    display: block;
+    height: 100%;
+    text-decoration: none;
+    width: 100%;
+
+    &:hover {
+      background: #ff6c00;
+      color: #fff;
+      outline: 1px solid #ff6c00;
+    }
+  }
+
+  .prev, .next {
+    position: relative;
+
+    a{
+      position: relative;
+
+      &:hover {
+        background: none;
+        outline: none;
+      }
+
+      span {
+        left: 50%;
+        position: absolute;
+        top: 50%;
+
+        span {
+          margin-left: -4px;
+          margin-top: -4px;
+        }
+
+        &:before, &:after {
+          background: #9e9fa1;
+          content: '';
+          height: 2px;
+          left: 0;
+          position: absolute;
+          top: 0;
+          width: 6px;
+        }
+
+        &:after {
+          left: -2px;
+          top: 2px;
+          transform: rotate(90deg);
+        }
+      }
+    }
+  }
+
+  .prev {
+    margin-right: 28px;
+
+    a {
+      transform: rotate(-45deg);
+    }
+  }
+
+  .next {
+    margin-left: 28px;
+
+    a {
+      transform: rotate(135deg);
+    }
+  }
+}

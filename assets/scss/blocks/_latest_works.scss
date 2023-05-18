@@ -1,0 +1,74 @@
+@import "../config";
+
+.latestWorks {
+  display: none;
+
+  @media (min-width: $media-tablet) {
+    display: block;
+    text-align: center;
+
+    .blackButton {
+      margin: 34px auto 33px;
+    }
+
+    .carousel-examples {
+      background: $color-dark-gray url('../images/bg-gray.png') center;
+      padding: 18px 55px 3px;
+    }
+
+    .item {
+      font-size: 15px;
+      height: 277px;
+      overflow: hidden;
+      text-align: left;
+      width: 318px;
+
+      a {
+        background: #fff;
+        color: #000;
+        display: block;
+        height: 277px;
+        margin: 0 auto;
+        text-decoration: none;
+        width: 318px;
+
+        &:hover {
+          .date:before {
+            width: 100px;
+          }
+        }
+      }
+
+      p {
+        letter-spacing: -.3px;
+        line-height: 1.2em;
+        margin: 16px 19px;
+      }
+
+      .date {
+        color: #afafaf;
+        font-size: 14px;
+        margin-top: 16px;
+        padding-top: 17px;
+        position: relative;
+
+        &:before {
+          background: #ff6c00;
+          content: '';
+          height: 2px;
+          left: -1px;
+          position: absolute;
+          top: 0;
+          transition: width .2s;
+          width: 50px;
+        }
+      }
+
+      img {
+        display: block;
+        height: 160px;
+        width: 318px;
+      }
+    }
+  }
+}

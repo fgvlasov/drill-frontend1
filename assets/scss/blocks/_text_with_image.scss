@@ -1,0 +1,106 @@
+@import "../config";
+
+article {
+  .textWithImage {
+    margin-top: 44px;
+  }
+
+  .textWithImage:first-child {
+    margin-top: 0;
+  }
+}
+
+.textWithImage {
+  font-size: 14px;
+  letter-spacing: -.3px;
+  line-height: 1.25em;
+  overflow: hidden;
+
+  img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  .content {
+    margin: 20px;
+    overflow: hidden;
+  }
+
+  p {
+    margin: 16px 0;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  h3 {
+    margin-top: 0!important;
+  }
+
+  h4 {
+    font-weight: bold;
+    margin: 33px 0 20px;
+  }
+
+  ul {
+    margin: 17px 0 20px 0;
+    display: block;
+  }
+
+  li {
+    margin-top: 17px;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      height: 6px;
+      width: 6px;
+      background: #000;
+      border-radius: 3px;
+      margin: 0 8px 1px 0;
+    }
+  }
+
+  &.vacancy {
+    h3 {
+      color: #000;
+      text-transform: none;
+      font-size: 20px;
+      margin: 0 0 18px;
+      font-weight: normal;
+      letter-spacing: -.3px;
+    }
+
+    h4 {
+      margin: 16px 0 16px;
+    }
+
+    ul {
+      margin: 0;
+    }
+
+    li {
+      margin-top: 0;
+    }
+
+    .blackButton {
+      margin-top: 18px;
+      padding-bottom: 7px;
+      padding-top: 6px;
+    }
+  }
+
+  @media (min-width: $media-tablet) {
+    img {
+      max-width: 50%;
+      margin: 0 50px 50px 0;
+      float: left;
+    }
+
+    .content {
+      margin: 0;
+    }
+  }
+}

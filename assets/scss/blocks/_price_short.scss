@@ -1,0 +1,112 @@
+@import "../config";
+@import "../sprites/sprites-svg";
+
+.priceShort {
+  font-size: 20px;
+  margin-top: 30px;
+
+  h4 {
+    background: #36373c;
+    color: $color-accent;
+    line-height: 1.2em;
+    letter-spacing: -.35px;
+    padding: 30px 30px 28px;
+
+    &.withIcon {
+      padding-left: 70px;
+      position: relative;
+
+      &:before {
+        content: '';
+        left: 20px;
+        position: absolute;
+        top: 35px;
+
+        @include sprite-svg($sprite-main-price);
+      }
+    }
+  }
+
+  .list {
+    border: 3px solid #36373c;
+    letter-spacing: -.35px;
+    padding: 30px;
+    text-align: center;
+  }
+
+  .hint {
+    border-top: 1px solid #d9d9da;
+    margin-top: 56px;
+    padding-top: 34px;
+    font-size: 14px;
+    color: #424348;
+
+    p {
+      margin-top: 19px;
+      opacity: .8;
+    }
+  }
+
+  .del {
+    height: 30px;
+    margin-top: 20px;
+    position: relative;
+
+    &:before {
+      background: $color-accent;
+      border-radius: 50%;
+      content: '';
+      height: 7px;
+      left: 50%;
+      margin-left: -4px;
+      position: absolute;
+      top: 0;
+      width: 7px;
+    }
+  }
+
+  small {
+    display: block;
+    font-size: 14px;
+    margin-top: 19px;
+  }
+
+  @media (min-width: $media-tablet) {
+    .list {
+      text-align: left;
+
+      ul {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 4px;
+      }
+
+      .del {
+        margin-top: 7px;
+      }
+    }
+  }
+
+  @media (min-width: $media-tablet) {
+    display: flex;
+
+    h4 {
+      padding: 50px 30px 50px 70px;
+      width: 325px;
+
+      &.withIcon {
+        padding-left: 115px;
+
+        &:before {
+          left: 56px;
+          top: 54px;
+        }
+      }
+    }
+
+    .list {
+      flex-grow: 1;
+      padding: 45px 60px;
+    }
+  }
+}

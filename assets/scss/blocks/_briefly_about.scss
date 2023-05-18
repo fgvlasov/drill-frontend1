@@ -1,0 +1,203 @@
+@import "../config";
+
+#brieflyAbout {
+  display: none;
+}
+
+@media (min-width: $media-tablet) {
+  #brieflyAbout {
+    display: block;
+    height: 602px;
+    margin-top: 30px;
+    overflow: hidden;
+    position: relative;
+    z-index: 20;
+
+    .numbers {
+      display: block;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      letter-spacing: -.4px;
+      line-height: 18px;
+      top: 0;
+      width: 100%;
+      z-index: 30;
+
+      a {
+        color: black;
+        display: block;
+        position: relative;
+        text-decoration: none;
+
+        &:hover {
+          color: #585d6f;
+
+          &:after {
+            height: 176px;
+            opacity: 1;
+            top: -42px;
+            width: 176px;
+          }
+        }
+
+        &:after {
+          border: 1px solid #585d6f;
+          border-radius: 50%;
+          content: '';
+          display: block;
+          height: 120px;
+          left: 50%;
+          opacity: 0;
+          position: absolute;
+          top: -17px;
+          transform: translateX(-50%);
+          transition: opacity .2s, left .2s, top .2s, width .2s, height .2s;
+          width: 120px;
+        }
+      }
+
+      li {
+        font-size: 15px;
+        position: absolute;
+        max-width: 100px;
+        width: auto;
+        //outline: 1px solid red;
+
+        &.drill {
+          bottom: 55px;
+          left: 70%;
+        }
+
+        &.holes {
+          left: 92px;
+          top: 110px;
+        }
+
+        &.projects {
+          left: 60%;
+          top: 50px;
+        }
+
+        &.rez {
+          left: 35%;
+          top: 335px;
+        }
+
+        &.shtrob {
+          right: 20px;
+          top: 172px;
+        }
+      }
+
+      small {
+        color: #ff6c00;
+        display: block;
+        font-size: 15px;
+        font-weight: bold;
+        letter-spacing: 0;
+        text-transform: uppercase;
+      }
+
+      strong {
+        display: block;
+        font-size: 40px;
+        font-weight: bold;
+        letter-spacing: -.8px;
+        margin: 10px 0;
+
+        span {
+          font-size: 30px;
+        }
+      }
+    }
+
+    .parallax {
+      height: 602px;
+      width: 100%;
+      z-index: 21;
+
+      .top {
+        height: 305px;
+        left: 0;
+        margin-top: 100px;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 24;
+
+        .image {
+          background: url('../images/home/parallax-1.png');
+          display: block;
+          height: 305px;
+          left: 50%;
+          margin: -152px 0 0 -161px;
+          position: absolute;
+          top: 50%;
+          width: 323px;
+          z-index: 24;
+        }
+      }
+
+      .middle {
+        height: 371px;
+        left: 0;
+        margin-top: 60px;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 23;
+
+        .image {
+          background: url('../images/home/parallax-2.png');
+          display: block;
+          height: 306px;
+          left: 30%;
+          margin: -153px 0 0 -272px;
+          position: absolute;
+          top: 50%;
+          width: 547px;
+          z-index: 23;
+
+          &:last-child {
+            background: url('../images/home/parallax-3.png');
+            height: 371px;
+            left: auto;
+            margin: -165px 0 0 0;
+            right: 0;
+            width: 552px;
+          }
+        }
+      }
+
+      .bottom {
+        height: 321px;
+        left: 0;
+        margin-top: 160px;
+        position: absolute;
+        width: 100%;
+        z-index: 22;
+
+        .image {
+          background: url('../images/home/parallax-4.png');
+          display: block;
+          height: 321px;
+          left: 0;
+          position: absolute;
+          bottom: 0;
+          width: 229px;
+          z-index: 22;
+
+          &:last-child {
+            background: url('../images/home/parallax-5.png');
+            bottom: 15px;
+            height: 146px;
+            left: 57%;
+            margin: 0;
+            width: 201px;
+          }
+        }
+      }
+    }
+  }
+}

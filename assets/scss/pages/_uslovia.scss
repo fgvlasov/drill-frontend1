@@ -1,0 +1,133 @@
+@import "../config";
+@import "../sprites/sprites-svg";
+
+#usloviaPage {
+  .headline {
+    margin-bottom: 90px;
+
+    img {
+      height: 200px;
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+
+  .rules {
+    li {
+      display: block;
+      font-size: 18px;
+      line-height: 1.25em;
+      text-align: center;
+      margin-bottom: 68px;
+
+      .icon {
+        background: $color-accent;
+        border-radius: 50%;
+        display: block;
+        height: 118px;
+        margin: 0 auto 24px;
+        position: relative;
+        width: 118px;
+
+        &:after {
+          content: '';
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+      
+      &.noPrepayment {
+        .icon {
+          background-image: url(../images/uslovia/r1.jpg);
+          &:after { @include sprite-svg($sprite-uslovia-no-prepayment); }
+        }
+      }
+
+      &.minPrice {
+        .icon {
+          background-image: url(../images/uslovia/r2.jpg);
+          &:after {
+            margin-left: -7px;
+
+            @include sprite-svg($sprite-uslovia-min-price);
+          }
+        }
+      }
+
+      &.freeConsult {
+        .icon {
+          background-image: url(../images/uslovia/r3.jpg);
+          &:after { @include sprite-svg($sprite-uslovia-free-consult); }
+        }
+      }
+
+      &.businessTripPrice {
+        .icon {
+          background-image: url(../images/uslovia/r4.jpg);
+          &:after { @include sprite-svg($sprite-uslovia-business-trip-price); }
+        }
+      }
+
+      &.contract {
+        .icon {
+          background-image: url(../images/uslovia/r5.jpg);
+          &:after { @include sprite-svg($sprite-uslovia-contract); }
+        }
+      }
+
+      &.paymentTypes {
+        .icon {
+          background-image: url(../images/uslovia/r6.jpg);
+          &:after {
+            margin-top: 5px;
+
+            @include sprite-svg($sprite-uslovia-payment-types);
+          }
+        }
+      }
+
+      &.warranty {
+        .icon {
+          background-image: url(../images/uslovia/r7.jpg);
+          &:after { @include sprite-svg($sprite-uslovia-warranty); }
+        }
+      }
+
+      &.sales {
+        .icon {
+          background-image: url(../images/uslovia/r8.jpg);
+          &:after { @include sprite-svg($sprite-uslovia-sales); }
+        }
+      }
+    }
+  }
+
+  @media (min-width: $media-tablet) {
+    .headline {
+      img {
+        height: auto;
+      }
+    }
+
+    .rules {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      li {
+        padding: 0 50px;
+      }
+    }
+  }
+
+  @media (min-width: $media-desktop) {
+    .rules {
+      grid-template-columns: repeat(4, 1fr);
+
+      li {
+        padding: 0 30px;
+      }
+    }
+  }
+}

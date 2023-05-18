@@ -1,0 +1,75 @@
+@import "../config";
+
+#objectsList {
+  text-align: center;
+
+  li {
+    border: 1px solid #cacbcf;
+    display: inline-block;
+    font-size: 15px;
+    height: 277px;
+    margin: 0 16px 35px 16px;
+    overflow: hidden;
+    text-align: left;
+    width: 318px;
+
+    a {
+      background: #fff;
+      height: 277px;
+      width: 318px;
+      display: block;
+      margin: 0 auto;
+
+      color: #000;
+      text-decoration: none;
+
+      &:hover {
+        color: #949599;
+
+        .date:before {
+          width: 279px;
+        }
+      }
+    }
+
+    p {
+      letter-spacing: -.3px;
+      line-height: 1.2em;
+      margin: 16px 19px;
+    }
+
+    .date {
+      color: #afafaf;
+      font-size: 14px;
+      margin-top: 16px;
+      position: relative;
+      padding-top: 17px;
+
+      &:before {
+        background: #ff6c00;
+        content: '';
+        height: 2px;
+        left: -1px;
+        position: absolute;
+        top: 0;
+        transition: width .2s;
+        width: 50px;
+      }
+    }
+
+    img {
+      display: block;
+      height: 160px;
+      width: 318px;
+    }
+  }
+
+  @media (min-width: $media-desktop) {
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+      margin: 0 32px 35px 0;
+    }
+  }
+}

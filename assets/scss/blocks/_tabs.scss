@@ -1,0 +1,9 @@
+#tabs {
+  .tabItem {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+}

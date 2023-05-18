@@ -1,0 +1,112 @@
+@import "../config";
+
+#reviewsList {
+  overflow: hidden;
+  padding-top: 10px;
+
+  li {
+    position: relative;
+    padding-top: 144px;
+  }
+
+  img {
+    left: 50%;
+    position: absolute;
+    top: 10px;
+    transform: translateX(-50%);
+  }
+
+  .comment {
+    background: #ecedf1;
+    margin-bottom: 35px;
+    min-height: 100px;
+    padding: 18px 22px 16px;
+    text-align: left;
+    transition: background-color .2s, margin-right .2s, padding-right .2s;
+
+    &:before {
+      border: 16px solid transparent;
+      border-bottom-color: #ecedf1;
+      content: '';
+      display: block;
+      height: 0;
+      position: absolute;
+      left: 50%;
+      margin-left: -16px;
+      top: 112px;
+      transform: scaleX(.8);
+      transition: border-color .2s;
+      width: 0;
+    }
+  }
+
+  .additional {
+    &:before {
+      left: 0;
+      transform: none;
+    }
+  }
+
+  a:hover {
+    .comment {
+      background: #d2d4dc;
+      margin-right: -10px;
+      padding-right: 32px;
+
+      &:before {
+        border-right-color: #d2d4dc;
+      }
+    }
+
+    .additional:before {
+      width: 100%;
+    }
+  }
+
+  p.more{
+    margin: 60px auto 0;
+    text-align: center;
+  }
+
+  @media (min-width: $media-tablet) {
+    padding-bottom: 141px;
+    position: relative;
+
+    > div {
+      float: left;
+      width: 50%;
+    }
+
+    li {
+      margin-right: 3px;
+      padding-left: 152px;
+      padding-top: 0;
+    }
+
+    img {
+      left: 13px;
+      top: 3px;
+      transform: none;
+    }
+
+    .comment {
+      margin-bottom: 11px;
+
+      &:before {
+        border-bottom-color: transparent;
+        border-right-color: #ecedf1;
+        left: 120px;
+        margin-left: 0;
+        top: 13px;
+        transform: scaleY(.8);
+      }
+    }
+
+    .blackButton {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}

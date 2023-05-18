@@ -1,0 +1,330 @@
+@import "../_config";
+@import "../sprites/sprites-svg";
+
+@import "../blocks/articles_demo";
+@import "../blocks/briefly_about";
+
+.previewSections {
+  margin-top: 35px;
+}
+
+.sectionPreview {
+  $animation-time: .4s;
+
+  display: block;
+  margin-bottom: 4px;
+  overflow: hidden;
+
+  a {
+    font-size: 22px;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-decoration: none;
+    display: block;
+    transition: padding $animation-time;
+
+    div {
+      padding: 20px;
+      background: rgba(0, 0, 0, .5);
+      transition: margin-top $animation-time, background-color $animation-time, padding $animation-time;
+      display: block;
+    }
+
+    strong {
+      display: block;
+    }
+  }
+
+  li {
+    background: #000 center no-repeat;
+    background-size: cover;
+    display: block;
+    outline: 4px solid white;
+    position: relative;
+    
+    &.sectionAlmRezka {
+      background-image: url('../images/home/section-alm-rezka.jpg');
+    }
+    &.sectionAlmSwerl {
+      background-image: url('../images/home/section-alm-swerl.jpg');
+    }
+    &.sectionDemontazh {
+      background-image: url('../images/home/section-demontazh.jpg');
+    }
+    &.sectionShlif {
+      background-image: url('../images/home/section-shlif.jpg');
+    }
+    &.sectionShtrob {
+      background-image: url('../images/home/section-shtrob.jpg');
+    }
+  }
+
+  .arrows {
+    position: absolute;
+    right: -(nth($sprite-main-goto-arrows, 5));
+    bottom: 56px;
+    display: block;
+    transition: right $animation-time;
+
+    @include sprite-svg($sprite-main-goto-arrows);
+  }
+
+  .button {
+    border: 1px solid rgba(255, 255, 255, .8);
+    display: block;
+    font-family: 'OpenSans', sans-serif;
+    font-size: 12px;
+    height: 48px;
+    line-height: 48px;
+    margin-top: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: opacity $animation-time;
+    width: 192px;
+  }
+
+  @media (min-width: $media-tablet) {
+    &.twoCell {
+      li {
+        width: 50%;
+      }
+    }
+    &.threeCell {
+      li {
+        width: 33.3333%;
+      }
+    }
+
+    a {
+      div {
+        padding: 80px 40px 0 40px;
+        height: 328px;
+      }
+      strong {
+        max-width: 350px;
+      }
+    }
+
+    li {
+      height: 328px;
+      float: left;
+
+      &:hover {
+        a {
+          padding-top: 50px;
+        }
+
+        div {
+          background: rgba(0, 0, 0, .7);
+          padding-top: 30px;
+        }
+      }
+    }
+
+    .button {
+      margin-top: 40px;
+    }
+  }
+
+  @media (min-width: $media-desktop) {
+    a {
+      div {
+        padding: 80px 0 0 66px;
+      }
+    }
+
+    li {
+      &:hover {
+        a {
+          padding-top: 198px;
+        }
+
+        .button {
+          opacity: 0;
+        }
+
+        .arrows {
+          right: 31px;
+        }
+      }
+    }
+  }
+}
+
+.homeGeneral {
+  background: #e8e9ed url('../images/bg-light-gray.jpg') top center no-repeat;
+  background-size: cover;
+  margin-top: 30px;
+  padding-bottom: 10px;
+  padding-top: 30px;
+
+  @media (min-width: $media-tablet) {
+    padding-bottom: 290px;
+    padding-top: 290px;
+    margin-top: -300px;
+  }
+}
+
+.aboutBenefits {
+  font-size: 15px;
+  letter-spacing: -.3px;
+  line-height: 1.2em;
+  text-align: center;
+
+  li, .item {
+    display: block;
+    margin-bottom: 70px;
+    padding-top: 200px;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &.benefit-1:before {
+      background-image: url('../images/home/about-1.png');
+      height: 156px;
+      width: 216px;
+    }
+    &.benefit-2:before {
+      background-image: url('../images/home/about-2.png');
+      height: 156px;
+      width: 181px;
+    }
+    &.benefit-3:before {
+      background-image: url('../images/home/about-3.png');
+      height: 162px;
+      width: 239px;
+    }
+    &.benefit-4:before {
+      background-image: url('../images/home/about-4.png');
+      height: 156px;
+      width: 183px;
+    }
+    &.benefit-5:before {
+      background-image: url('../images/home/about-5.png');
+      height: 156px;
+      width: 197px;
+    }
+  }
+
+  @media (min-width: $media-tablet) {
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    li {
+      max-width: 260px;
+    }
+  }
+}
+
+.reviewsSmallList {
+  margin-top: 87px;
+  text-align: center;
+
+  .carousel-reviews {
+    margin-bottom: 69px;
+    margin-top: 20px;
+  }
+}
+
+.quickStart {
+  background: #000 url('../images/home/quick-start.jpg') center;
+  color: #fff;
+  height: 492px;
+  margin-top: 95px!important;
+  position: relative;
+  text-align: center;
+
+  &:before {
+    border: 18px solid white;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    content: '';
+    height: 0;
+    left: 50%;
+    margin-left: -17px;
+    position: absolute;
+    top: -18px;
+    transform: rotate(45deg) skew(-17deg, -17deg);
+    width: 0;
+  }
+
+  h2 {
+    padding-top: 80px;
+  }
+
+  a {
+    color: #fff;
+    font-size: 17px;
+
+    &:hover {
+      color: #ff6c00;
+      text-decoration: underline;
+    }
+  }
+
+  p {
+    line-height: 1.25em;
+    max-width: 490px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  form {
+    display: block;
+    margin: 70px auto;
+    max-width: 100%;
+    position: relative;
+    width: 420px;
+
+    &:before, &:after {
+      background: #ff6c00;
+      border-radius: 5px;
+      content: '';
+      height: 10px;
+      left: 50%;
+      margin-left: -5px;
+      position: absolute;
+      top: -39px;
+      width: 10px;
+    }
+
+    &:after {
+      top: auto;
+      bottom: -39px;
+    }
+  }
+
+  input {
+    border: 1px solid #fff;
+    font-size: 20px;
+    height: 46px;
+    margin: 0 auto 15px;
+    max-width: 90%;
+    text-indent: 13px;
+    width: 420px;
+
+    &:focus {
+      border-color: #ff6c00;
+      outline: none;
+    }
+  }
+
+  .whiteButton {
+    height: 42px;
+  }
+
+  @media (min-width: $media-desktop) {
+    background-size: cover;
+    max-width: none!important;
+  }
+}

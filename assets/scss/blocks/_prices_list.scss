@@ -1,0 +1,231 @@
+@import "../config";
+
+.pricesList {
+  border: 3px solid #36373c;
+  margin-top: 30px;
+
+  .stages {
+    background: #36373c;
+    color: #fa922a;
+    flex-grow: 0;
+    flex-shrink: 0;
+    font-size: 20px;
+    padding: 18px 20px 10px;
+    text-align: center;
+
+    li {
+      cursor: pointer;
+      display: block;
+      letter-spacing: -.35px;
+      padding: 10px;
+      position: relative;
+
+      &.active {
+        background: #fff;
+        color: #36373c;
+        cursor: default;
+
+        &:before {
+          background: $color-accent;
+          border-radius: 50%;
+          content: '';
+          height: 7px;
+          display: inline-block;
+          width: 7px;
+          margin-bottom: 4px;
+          margin-right: 5px;
+        }
+      }
+
+      &.sales {
+        border: 3px solid #fff;
+        margin: 50px 29px 40px 25px;
+        padding: 24px 28px 42px;
+        color: #fff;
+
+        ul {
+          display: block;
+          margin-top: 14px;
+        }
+
+        li {
+          color: #fa922a;
+          margin: 8px 0 0;
+          padding: 0;
+          font-size: 16px;
+        }
+
+        span {
+          color: #fff;
+        }
+      }
+    }
+
+    small {
+      display: block;
+      font-size: 13px;
+    }
+  }
+
+  article {
+    background: #fff;
+    padding: 20px;
+    flex-grow: 1;
+
+    table {
+      font-size: 14px;
+      width: 100%;
+
+      th {
+        font-size: 18px;
+        text-align: left;
+
+        @media (min-width: $media-desktop) {
+          span {
+            display: block;
+            position: relative;
+            width: 80%;
+
+            &:after {
+              content: '';
+              position: absolute;
+              right: 0;
+              top: 50%;
+              margin-top: -4px;
+              width: 7px;
+              height: 7px;
+              background: #fa922a;
+              border-radius: 40%;
+            }
+          }
+        }
+      }
+
+      td {
+        padding-top: 19px;
+      }
+    }
+
+    ul {
+      list-style: disc;
+      margin-left: 19px;
+
+      &.important {
+        border-left: 5px solid #fa922a;
+        margin-left: 0;
+        padding: 5px 0 0;
+
+        li {
+          margin-left: 55px;
+        }
+      }
+
+      &.additional {
+        color: #424348;
+        font-size: 14px;
+        opacity: .8;
+      }
+    }
+
+    li {
+      margin-bottom: 17px;
+    }
+  }
+
+  hr {
+    background: #a4a5a9;
+    border: none;
+    height: 1px;
+    margin-bottom: 53px;
+    margin-top: 53px;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 1.22em;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  ul {
+    font-size: 14px;
+    line-height: 1.22em;
+  }
+
+  @media (min-width: $media-tablet) {
+    display: flex;
+    align-content: stretch;
+
+    .stages {
+      width: 328px;
+      padding-left: 0;
+      padding-right: 0;
+      text-align: left;
+
+      > li {
+        display: block;
+        padding: 33px 20px 35px 68px;
+
+        &:hover {
+          &:before {
+            background: white;
+            border-radius: 50%;
+            content: '';
+            display: inline-block;
+            height: 7px;
+            left: 37px;
+            margin-bottom: 4px;
+            margin-right: 5px;
+            position: absolute;
+            top: 41px;
+            width: 7px;
+          }
+        }
+
+        &.active {
+          &:before {
+            background: $color-accent;
+            left: 37px;
+            position: absolute;
+            top: 41px;
+          }
+        }
+
+        &.sales {
+          cursor: default;
+
+          &:hover {
+            &:before {
+              display: none;
+            }
+          }
+          
+          li {
+            cursor: default;
+            position: relative;
+          }
+
+          span {
+            position: absolute;
+            right: 0;
+            width: 32px;
+          }
+        }
+      }
+
+      small {
+        display: block;
+        font-size: 16px;
+        margin-top: -3px;
+      }
+    }
+
+    article {
+      padding: 50px 0 50px 62px;
+
+      hr, p, ul {
+        margin-right: 56px;
+      }
+    }
+  }
+}

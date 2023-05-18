@@ -1,0 +1,143 @@
+@import "../config";
+@import "../sprites/sprites-svg";
+
+#articlesPromo {
+  $animation-time: .4s;
+
+  text-align: center;
+
+  ul {
+    display: block;
+    margin-bottom: 18px;
+    overflow: hidden;
+    padding: 20px 0;
+    text-align: left;
+  }
+
+  li {
+    background-size: cover;
+    display: block;
+    float: left;
+    height: 293px;
+    position: relative;
+    width: 100%;
+    margin: 2px;
+
+    div {
+      background: rgba(0, 0, 0, .5);
+      bottom: 0;
+      height: 100%;
+      left: 0;
+      padding: 45px 50px 50px;
+      position: absolute;
+      transition: background-color $animation-time, height $animation-time, padding $animation-time;
+      width: 100%;
+    }
+
+    a {
+      color: #fff;
+      display: block;
+      height: 100%;
+      font-family: Arial, sans-serif;
+      font-size: 21px;
+      font-weight: bold;
+      line-height: 1.25em;
+
+      &:hover {
+        div {
+          background: rgba(0, 0, 0, .7);
+          height: 180px;
+          padding-top: 13px;
+        }
+
+        .more {
+          background: #ff6c00;
+          border-color: #ff6c00;
+          bottom: 17px;
+
+          &:after {
+            margin-left: -(calc(nth($sprite-main-goto-arrows-black, 5) /2));
+            margin-top: -(calc(nth($sprite-main-goto-arrows-black, 6) /2));
+            @include sprite-svg($sprite-main-goto-arrows-black);
+          }
+        }
+
+        .views {
+          color: white;
+          &:before {
+            @include sprite-svg($sprite-main-watch-hover);
+          }
+        }
+      }
+    }
+
+    strong {
+      display: block;
+      max-height: 3.75em;
+      max-width: 300px;
+      overflow: hidden;
+    }
+  }
+
+  .more {
+    border: 1px solid rgba(255, 255, 255, .6);
+    bottom: 85px;
+    height: 50px;
+    left: 51px;
+    position: absolute;
+    transition: bottom $animation-time, background-color $animation-time, border-color $animation-time;
+    width: 57px;
+
+    &:after {
+      content: '';
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      margin-left: -(calc(nth($sprite-main-goto-arrow, 5) /2));
+      margin-top: -(calc(nth($sprite-main-goto-arrow, 6) /2));
+      @include sprite-svg($sprite-main-goto-arrow);
+    }
+  }
+
+  .views {
+    bottom: 11px;
+    color: rgba(255, 255, 255, .5);
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    font-weight: normal;
+    position: absolute;
+    right: 20px;
+    transition: color $animation-time;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: -25px;
+      top: 7px;
+
+      @include sprite-svg($sprite-main-watch);
+    }
+  }
+
+  @media (min-width: $media-tablet) {
+    margin-top: -260px;
+
+    li {
+      width: calc(50% - 4px);
+    }
+  }
+
+  @media (min-width: $media-desktop) {
+    li {
+      width: calc(25% - 4px);
+
+      &.tall {
+        height: 590px;
+      }
+
+      &.wide {
+        width: calc(50% - 4px);
+      }
+    }
+  }
+}
