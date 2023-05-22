@@ -1,13 +1,10 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+//https://docs.strapi.io/dev-docs/integrations/nuxt-js
 export default defineNuxtConfig({
 	modules: ['@nuxtjs/strapi'],
   	strapi: {
     	//url: process.env.STRAPI_URL || 'http://localhost:1337',
-		url: process.env.STRAPI_URL || 'https://drill.ptzsite.ru',
-  		prefix: '/api',
-  		version: 'v4',
-  		cookie: {},
-  		cookieName: 'strapi_jwt'
+		url: 'https://drill.ptzsite.ru',
+		
   	},
 	  css: [
 		// SCSS file in the project
