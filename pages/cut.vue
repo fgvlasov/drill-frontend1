@@ -14,6 +14,7 @@
 const { data: works } = await useAsyncData(
   'works', 
   () => $fetch(`${process.env.STRAPI_API_URL}/works`)
+
 )
 </script>
 
