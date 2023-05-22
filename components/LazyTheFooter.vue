@@ -1,9 +1,10 @@
 <template>
-<p>Главная страница Компания</p>
+$END$
 </template>
 
 <script>
 export default {
+name: "LazyTheFooter"
 }
 </script>
 

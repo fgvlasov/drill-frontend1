@@ -1,74 +1,52 @@
-<template>
-  <div>
-      <TheHeader />
-      <!--    Заменяется содержимое на страницы-->
-      <NuxtPage />
-
-      <LazyTheFooter />
-  </div>
-</template>
-
-<script>
-
-// import TheHeader from "~/components/TheHeader.vue";
-
-export default {
-  // components: {TheHeader}
-}
-
-</script>
-
-<style scoped>
-
-.submenu {
+  .submenu {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-}
 
-.item-menu {
+  }
+
+  .item-menu {
     padding: 5px;
-}
-.social-icons {
+  }
+  .social-icons {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-left: auto;
-}
-.branding {
+  }
+  .branding {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-}
-h1 {
+  }
+  h1 {
     display: flex;
     flex-wrap: nowrap;
-}
-.item-select {
+  }
+  .item-select {
     margin-left: auto;
     display: flex;
     /*justify-content: flex-start;*/
     justify-content: space-evenly;
     align-items: center;
     /*flex-flow: column wrap;*/
-}
-.select-index {
+  }
+  .select-index {
     margin-left: auto;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-wrap: nowrap;
-}
-.phone-wrapper {
+  }
+  .phone-wrapper {
     display: flex;
     flex-direction: column;
     align-items: unsafe center;
     padding: 5px;
-}
-.menu-leaf {
+  }
+  .menu-leaf {
     display: flex;
     justify-content: space-around;
     /*align-items: center;    */
     /*flex-wrap: nowrap;*/
-}
-</style>
+  }
