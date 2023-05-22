@@ -2,12 +2,12 @@
     <header>
         <div class="header submenu">
             <NuxtLink to="/" class="item-menu">Компания</NuxtLink>
-            <NuxtLink to="completedobjects" class="item-menu">Выполненные объекты</NuxtLink>
-            <NuxtLink to="fotoandvideo" class="item-menu">Фото и видео</NuxtLink>
-            <NuxtLink to="workingconditions" class="item-menu">Условия работы</NuxtLink>
-            <NuxtLink to="articles" class="item-menu">Статьи</NuxtLink>
-            <NuxtLink to="reviews" class="item-menu">Отзывы</NuxtLink>
-            <NuxtLink to="contacts" class="item-menu">Контакты</NuxtLink>
+            <NuxtLink to="/completedobjects" class="item-menu">Выполненные объекты</NuxtLink>
+            <NuxtLink to="/fotoandvideo" class="item-menu">Фото и видео</NuxtLink>
+            <NuxtLink to="/workingconditions" class="item-menu">Условия работы</NuxtLink>
+            <NuxtLink to="/articles" class="item-menu">Статьи</NuxtLink>
+            <NuxtLink to="/reviews" class="item-menu">Отзывы</NuxtLink>
+            <NuxtLink to="/contacts" class="item-menu">Контакты</NuxtLink>
         </div>
 
         <div class="header social-icons">
@@ -37,11 +37,11 @@
         </div>
         <div class="menu-leaf">
             <nav>
-                <NuxtLink to="drill" class="item-menu">АЛМАЗНОЕ СВЕРЛЕНИЕ</NuxtLink>
-                <NuxtLink to="cut" class="item-menu">АЛМАЗНАЯ РЕЗКА</NuxtLink>
-                <NuxtLink to="dismantling" class="item-menu">ДЕМОНТАЖ</NuxtLink>
-                <NuxtLink to="groove" class="item-menu">ШТРОБЛЕНИЕ</NuxtLink>
-                <NuxtLink to="grind" class="item-menu">ШЛИФОВКА</NuxtLink>
+                <NuxtLink to="/services/services-drill" class="item-menu">АЛМАЗНОЕ СВЕРЛЕНИЕ</NuxtLink>
+                <NuxtLink to="/services/services-cut" class="item-menu">АЛМАЗНАЯ РЕЗКА</NuxtLink>
+                <NuxtLink to="/services/services-dismantling" class="item-menu">ДЕМОНТАЖ</NuxtLink>
+                <NuxtLink to="/services/services-groove" class="item-menu">ШТРОБЛЕНИЕ</NuxtLink>
+                <NuxtLink to="/services/services-grind" class="item-menu">ШЛИФОВКА</NuxtLink>
             </nav>
         </div>
 
