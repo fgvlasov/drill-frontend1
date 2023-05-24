@@ -26,7 +26,7 @@
             <div  class="item-select">
                 <div class="phone-wrapper">
                     <NuxtLink :to="'tel: ' + activeIdx.phone">{{ activeIdx.extended_phone }}</NuxtLink>
-                    <NuxtLink to="contacts">Как нас найти</NuxtLink>
+                    <NuxtLink to="/contacts">Как нас найти</NuxtLink>
                 </div>
                 <select v-model="activeIndex">
                     <option  v-for="(reg, idx) in regional_phones" v-bind:value="idx">
