@@ -1,8 +1,15 @@
 <template>
-<p>WorkingСonditions</p>
+  <div>
+    <head>
+      <Title>Условия работы | CONCUT</Title>
+    </head>
+    <p>WorkingСonditions</p>
+  </div>
+
 </template>
 
 <script>
+
 export default {
   name: "WorkingСonditions"
 }

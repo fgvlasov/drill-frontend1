@@ -1,8 +1,15 @@
 <template>
-<p>Articles</p>
+  <div>
+    <head>
+      <Title>Статьи | CONCUT</Title>
+    </head>
+
+    <p>Articles</p>
+  </div>
 </template>
 
 <script>
+
 export default {
   name: "Articles"
 }

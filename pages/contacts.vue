@@ -1,8 +1,15 @@
 <template>
-<p>Contacts</p>
+  <div>
+    <head>
+      <Title>Контакты | CONCUT</Title>
+    </head>
+    <p>Contacts</p>
+  </div>
+
 </template>
 
 <script>
+
 export default {
   name: "Contacts"
 }

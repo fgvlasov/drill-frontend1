@@ -37,11 +37,11 @@
         </div>
         <div class="menu-leaf">
             <nav>
-                <NuxtLink to="/services/services-drill" class="item-menu">АЛМАЗНОЕ СВЕРЛЕНИЕ</NuxtLink>
-                <NuxtLink to="/services/services-cut" class="item-menu">АЛМАЗНАЯ РЕЗКА</NuxtLink>
-                <NuxtLink to="/services/services-dismantling" class="item-menu">ДЕМОНТАЖ</NuxtLink>
-                <NuxtLink to="/services/services-groove" class="item-menu">ШТРОБЛЕНИЕ</NuxtLink>
-                <NuxtLink to="/services/services-grind" class="item-menu">ШЛИФОВКА</NuxtLink>
+                <NuxtLink to="/services/Алмазное сверление" class="item-menu">АЛМАЗНОЕ СВЕРЛЕНИЕ</NuxtLink>
+                <NuxtLink to="/services/Алмазная резка" class="item-menu">АЛМАЗНАЯ РЕЗКА</NuxtLink>
+                <NuxtLink to="/services/Демонтаж" class="item-menu">ДЕМОНТАЖ</NuxtLink>
+                <NuxtLink to="/services/Штробление" class="item-menu">ШТРОБЛЕНИЕ</NuxtLink>
+                <NuxtLink to="/services/Шлифовка" class="item-menu">ШЛИФОВКА</NuxtLink>
             </nav>
         </div>
 
@@ -54,7 +54,7 @@
 
 
 export default {
-  name: "TheNavbar",
+  name: "TheHeader",
     data() {
         return {
             activeIndex: 0,
