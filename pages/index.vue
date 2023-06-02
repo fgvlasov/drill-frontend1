@@ -1,23 +1,18 @@
 <template>
-  <div>
-    <head>
-      <Title>Компания | CONCUT</Title>
-    </head>
-    <div class="node node-page clearfix">
-      <h2>Компания</h2>
-      <ul class="breadCrumbs">
-        <li>
-          <a href="/">Главная</a>
-        </li>
-      </ul>
-    </div>
-  </div>
+  <LayoutDef>
+    <about />
+  </LayoutDef>
 </template>
 
-<script>
+<script setup>
 
-export default {
-}
+import LayoutDef from "~/layouts/LayoutDef.vue";
+import Home from "~/pages/about.vue";
+import About from "~/pages/about.vue";
+
+useHead({
+  title: "Компания | CONCUT",
+});
 </script>
 
 <style scoped>

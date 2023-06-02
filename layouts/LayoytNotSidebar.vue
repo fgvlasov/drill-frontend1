@@ -26,6 +26,4 @@ export default {
 
 <style scoped>
 
-@import 'assets/scss/my_scss/default.scss';
-
 </style>
