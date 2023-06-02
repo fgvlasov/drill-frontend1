@@ -1,0 +1,52 @@
+  .submenu {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+  }
+
+  .item-menu {
+    padding: 5px;
+  }
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+  }
+  .branding {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  h1 {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .item-select {
+    margin-left: auto;
+    display: flex;
+    /*justify-content: flex-start;*/
+    justify-content: space-evenly;
+    align-items: center;
+    /*flex-flow: column wrap;*/
+  }
+  .select-index {
+    margin-left: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+  .phone-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: unsafe center;
+    padding: 5px;
+  }
+  .menu-leaf {
+    display: flex;
+    justify-content: space-around;
+    /*align-items: center;    */
+    /*flex-wrap: nowrap;*/
+  }

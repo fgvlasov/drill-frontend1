@@ -29,7 +29,18 @@
 </template>
 
 <script>
+import ListObjects from "~/components/ListObjects.vue";
 
+export default {
+  components: {
+    ListObjects
+  },
+  setup() {
+    useHead({
+      title: "Компания | CONCUT",
+    });
+  },
+};
 </script>
 
 
