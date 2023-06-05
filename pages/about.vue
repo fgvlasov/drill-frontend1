@@ -23,6 +23,9 @@
       </div>
       <h3>Объекты</h3>
       <ListObjects />
+      <TheAccent />
+      <h3>Вакансия</h3>
+      <TheVacancy />
     </div>
   </div>
 
