@@ -1,17 +1,21 @@
 <template>
-  <div>
-    <head>
-      <Title>Контакты | CONCUT</Title>
-    </head>
-    <p>Contacts</p>
-  </div>
-
+  <LayoutDef>
+    <!--    <about />-->
+  </LayoutDef>
 </template>
 
 <script>
 
+import LayoutDef from "~/layouts/LayoutDef.vue";
+
 export default {
-  name: "Contacts"
+  name: "Contacts",
+  components: {LayoutDef},
+  setup() {
+    useHead({
+      title: "Контакты | CONCUT",
+    });
+  },
 }
 </script>
 

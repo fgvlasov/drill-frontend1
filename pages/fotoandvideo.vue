@@ -1,17 +1,20 @@
 <template>
-  <div>
-    <head>
-      <Title>Фото и видео | CONCUT</Title>
-    </head>
-    <p>FotoAndVideo</p>
-  </div>
-
+  <LayoutDef>
+    <!--    <about />-->
+  </LayoutDef>
 </template>
 
 <script>
+import LayoutDef from "~/layouts/LayoutDef.vue";
 
 export default {
-  name: "FotoAndVideo"
+  name: "FotoAndVideo",
+  components: {LayoutDef},
+  setup() {
+    useHead({
+      title: "Фото и видео | CONCUT",
+    });
+  },
 }
 </script>
 

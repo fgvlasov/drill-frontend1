@@ -1,17 +1,21 @@
 <template>
-  <div>
-    <head>
-      <Title>Статьи | CONCUT</Title>
-    </head>
-
-    <p>Articles</p>
-  </div>
+  <LayoutDef>
+    <!--    <about />-->
+  </LayoutDef>
 </template>
 
 <script>
 
+import LayoutDef from "~/layouts/LayoutDef.vue";
+
 export default {
-  name: "Articles"
+  name: "Articles",
+  components: {LayoutDef},
+  setup() {
+    useHead({
+      title: "Статьи | CONCUT",
+  });
+},
 }
 </script>
 

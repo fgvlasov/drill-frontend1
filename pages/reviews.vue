@@ -1,17 +1,21 @@
 <template>
-  <div>
-    <head>
-      <Title>Отзывы | CONCUT</Title>
-    </head>
-    <p>Reviews</p>
-  </div>
-
+  <LayoutDef>
+    <!--    <about />-->
+  </LayoutDef>
 </template>
 
 <script>
 
+import LayoutDef from "~/layouts/LayoutDef.vue";
+
 export default {
-  name: "Reviews"
+  name: "Reviews",
+  components: {LayoutDef},
+  setup() {
+    useHead({
+      title: "Отзывы | CONCUT",
+    });
+  },
 }
 </script>
 

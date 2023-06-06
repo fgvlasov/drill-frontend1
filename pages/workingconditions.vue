@@ -1,17 +1,21 @@
 <template>
-  <div>
-    <head>
-      <Title>Условия работы | CONCUT</Title>
-    </head>
-    <p>WorkingСonditions</p>
-  </div>
-
+  <LayoutDef>
+    <!--    <about />-->
+  </LayoutDef>
 </template>
 
 <script>
 
+import LayoutDef from "~/layouts/LayoutDef.vue";
+
 export default {
-  name: "WorkingСonditions"
+  name: "WorkingСonditions",
+  components: {LayoutDef},
+  setup() {
+    useHead({
+      title: "Условия работы | CONCUT",
+    });
+  },
 }
 </script>
 

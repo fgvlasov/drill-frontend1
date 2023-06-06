@@ -1,17 +1,21 @@
 <template>
-  <div>
-    <head>
-      <Title>Выполненные объекты | CONCUT</Title>
-    </head>
-
-    <p>CompletedObjects</p>
-  </div>
+  <LayoutDef>
+<!--    <about />-->
+  </LayoutDef>
 </template>
 
 <script>
 
+import LayoutDef from "~/layouts/LayoutDef.vue";
+
 export default {
-  name: "CompletedObjects"
+  name: "CompletedObjects",
+  components: {LayoutDef},
+  setup() {
+    useHead({
+      title: "Выполненные объекты | CONCUT",
+    });
+  },
 }
 </script>
 
